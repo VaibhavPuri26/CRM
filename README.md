@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+ ##  YouTube Video Fetcher (MERN Stack)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project allows users to search for YouTube videos, view video details like views, likes, comments, and channel information. The backend fetches the video data from YouTube API and stores it in a MongoDB database. The frontend allows users to search for videos and view the fetched data.
+Tech Stack
 
-## Available Scripts
+    Frontend: React
+    Backend: Node.js, Express
+    Database: MongoDB
+    Deployment:
+        Backend: Render
+        Frontend: Vercel
 
-In the project directory, you can run:
+## Prerequisites
 
-### `npm start`
+Before you start, ensure you have the following installed:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    Node.js (v14 or higher)
+    npm (Node Package Manager)
+    MongoDB (For local development if not using Render's cloud database)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Setup Instructions
+1. Clone the GitHub Repository
 
-### `npm test`
+Clone the project repository to your local machine:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## git clone https://github.com/VaibhavPuri26/<repo-name>.git
 
-### `npm run build`
+## Create an .env file
+YOUTUBE_API_KEY=AIzaSyDf7WqL5alto4lzZy8xggiNea4QbAmMhX8
+MONGODB_URI=mongodb+srv://VaibhavPuri:Vaibhav1905@ems.fdbge2f.mongodb.net/expenseapp
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Backend File is 
+Server.js
+To run the backend 
+## Run command "node server.js"
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## To run Frontend 
+Run command "npm run start"
 
-### `npm run eject`
+## To run Locally , Do this in app.js "Fetch videos function"
+const response = await axios.get("http://localhost:5000/api/videos", {
+  params: { query },
+});
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Deployment
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    The backend is deployed on Render, and you can access it at: https://crm-4-j371.onrender.com.
+    The frontend is deployed on Vercel.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Troubleshooting
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    If you encounter any issues with CORS, ensure your backend allows requests from the frontend domain.
+    Make sure MongoDB is running, or use the cloud MongoDB connection.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
