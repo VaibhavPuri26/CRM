@@ -12,7 +12,7 @@ function App() {
     setLoading(true);
     setError("");
     try {
-      const response = await axios.get("http://localhost:5000/api/videos", {
+      const response = await axios.get("https://crm-4-j371.onrender.com/api/videos", {
         params: { query },
       });
       console.log(response.data);
@@ -24,6 +24,7 @@ function App() {
       setLoading(false);
     }
   };
+  
 
   return (
     <div className="app">
